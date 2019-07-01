@@ -1,6 +1,27 @@
 <h1>Add Candidate</h1>
 
-<form action="/candidates" method="POST">
-  <input type="text" name="abc">
-  <input type="submit" value="go!">
-</form>
+<%= form_for(@candidate) do |form| %>
+
+<div>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+
+<div>
+  <%= form.label :party %>
+  <%= form.text_field :party %>
+</div>
+
+<div>
+  <%= form.label :age %>
+  <%= form.text_field :age %>
+</div>
+
+<div>
+  <%= form.label :politics %>
+  <%= form.text_area :politics %>
+</div>
+
+<%= form.submit %>
+
+<% end %>
