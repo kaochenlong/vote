@@ -1,5 +1,13 @@
 <h1>Add Candidate</h1>
 
+<% if @candidate.errors.any? %>
+  <ul>
+    <% @candidate.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for(@candidate) do |form| %>
 
 <div>
