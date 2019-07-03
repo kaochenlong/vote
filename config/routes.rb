@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :candidates
+  resources :candidates do
+    member do
+      post :vote
+    end
+  end
 end
